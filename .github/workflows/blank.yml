@@ -28,4 +28,4 @@ jobs:
         with:
           node-version: 18
       - name: Run index
-        run: node index.js
+        run: node hola-mundo.js
