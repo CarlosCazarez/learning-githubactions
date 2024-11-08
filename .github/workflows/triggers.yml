@@ -9,5 +9,7 @@ on:
       if: github.event.review.state == 'approved'
       runs-on: ubuntu-latest
       steps:
+        - name: created by
+          run: echo "job created by ${{github.actor}}"
         - name: approved step
-        - run: echo "This Pr was approved"
+          run: echo "This Pr was approved"
