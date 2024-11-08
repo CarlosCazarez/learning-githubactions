@@ -5,6 +5,7 @@ env:
   DIA_DE_LA_SEMANA: Lunes
 jobs:
   saludo-semana:
+    name: Saludo Normal 
     runs-on: ubuntu-latest
     env:
       SALUDO: Hola
@@ -13,3 +14,9 @@ jobs:
         run: echo "$SALUDO ${{ vars.CUSTOM_NAME }}. Hoy es $DIA_DE_LA_SEMANA"
         env:
           NAME: Carlos
+  saludo-secreto:
+    name: Saludo Secreto
+    runs-on: ubuntu-latest
+    steps:
+      - name: Saludar secretamente
+        run: echo " $SALUDO ${{ vars.CUSTM_NAME }}. Tu contraseña es ${{ secrets.PASSWORD }}"
