@@ -1,5 +1,6 @@
 name: triggers-example
 run-name: Learning actions triggers
+
 on:
   pull_request:
     types: [closed]
