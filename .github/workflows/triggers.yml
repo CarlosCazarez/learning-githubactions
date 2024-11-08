@@ -2,11 +2,11 @@ name: triggers-example
 run-name: Learning actions triggers
 on:
   pull_request:
-    types: [updated]
+    types: [closed]
 
 jobs:
   approved:
-    if: github.event.review.state == 'approved'
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: created by
