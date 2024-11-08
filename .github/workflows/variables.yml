@@ -3,12 +3,11 @@ run-name: Aprendiendo variables
 on: workflow_dispatch
 env:
   DIA_DE_LA_SEMANA: Lunes
+  SALUDO: Hola
 jobs:
   saludo-semana:
     name: Saludo Normal 
     runs-on: ubuntu-latest
-    env:
-      SALUDO: Hola
     steps:
       - name: Saludar
         run: echo "$SALUDO ${{ vars.CUSTOM_NAME }}. Hoy es $DIA_DE_LA_SEMANA"
