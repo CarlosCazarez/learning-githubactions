@@ -2,7 +2,8 @@ name: contextos
 run-name: Aprendiendo a usar contextos
 
 on: push
-
+env: 
+  GITHUB_REF: ${{ github.ref }}
 jobs:
   check-main:
     if: ${{ github.ref == 'refs/heads/main' }}
