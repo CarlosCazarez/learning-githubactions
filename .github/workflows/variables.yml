@@ -4,6 +4,7 @@ on: workflow_dispatch
 env:
   DIA_DE_LA_SEMANA: Lunes
   SALUDO: Hola
+  NAME: Carlos
 jobs:
   saludo-semana:
     name: Saludo Normal 
@@ -18,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Saludar secretamente
-        run: echo " $SALUDO ${{ vars.CUSTM_NAME }}. Tu contraseña es ${{ secrets.PASSWORD }}"
+        run: echo " $SALUDO ${{ vars.CUSTOM_NAME }}. Tu contraseña es ${{ secrets.PASSWORD }}"
